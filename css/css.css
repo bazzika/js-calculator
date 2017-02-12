@@ -59,7 +59,13 @@ footer {
     color: #fff;
     background-color: #26ADE4;
 }
-.tg .tg-outcome {
+button {
+    background-color: black;
+    border-color: black;
+    width: 100%;
+    padding: 20px 30px;
+}
+.tg .outcome {
     font-size: 16px;
     font-family: "Lucida Console", Monaco, monospace !important;
     background-color: #cac1c0;
@@ -68,7 +74,7 @@ footer {
     vertical-align: top;
     height: 65px;
 }
-.tg .tg-clear-button {
+.tg .clear-button {
     font-weight: bold;
     font-size: 16px;
     font-family: "Lucida Console", Monaco, monospace !important;
@@ -76,7 +82,7 @@ footer {
     color: #ffffff;
     text-align: center;
 }
-.tg .tg-currentclear-button {
+.tg .currentclear-button {
     font-weight: bold;
     font-size: 16px;
     font-family: "Lucida Console", Monaco, monospace !important;
@@ -84,30 +90,7 @@ footer {
     color: #ffffff;
     text-align: center;
 }
-.tg .tg-left-bracket {
-    font-weight: bold;
-    font-size: 16px;
-    font-family: "Lucida Console", Monaco, monospace !important;
-    background-color: #fe0000;
-    color: #ffffff;
-    text-align: center;
-    vertical-align: top;
-}
-button {
-    background-color: black;
-    border-color: black;
-    width: 100%;
-    padding: 20px 30px;
-}
-.tg .tg-right-bracket {
-    font-weight: bold;
-    font-size: 16px;
-    font-family: "Lucida Console", Monaco, monospace !important;
-    background-color: #330001;
-    color: #ffffff;
-    text-align: center;
-}
-.tg .tg-number {
+.tg .number {
     font-weight: bold;
     font-size: 16px;
     font-family: "Lucida Console", Monaco, monospace !important;
@@ -124,7 +107,7 @@ button {
     .tg col {
         width: auto !important;
     }
-    .tg-wrap {
+    .wrapper {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         margin: auto 0;

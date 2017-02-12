@@ -16,7 +16,7 @@ $('#clear-all-numbers').click(function() {
 });
 
 $('#clear-current-numbers').click(function() {
-  $('#result').text('');
+  $('#result').text($('#result').text().slice(0,-1));
 });
 
 $('#plus').click(function() {
