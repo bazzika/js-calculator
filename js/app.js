@@ -1,16 +1,16 @@
-/**
- * Created by Даша on 06.02.2017.
- */
 var operation = ['+', '-', '*', '/', '%', '.'];
 
 function revise() {
-  var lastChar = $('#result').text().slice(-1);
-  for (var i = 0; i < operation.length; i++) {
-    if (operation[i] == lastChar) {
-      $('#result').text('Err');
+    var lastChar = $('#result').text().slice(-1);
+    for (var i = 0; i < operation.length; i++) {
+      if (operation[i] == lastChar) {
+        $('#result').text('Err');
+      }
     }
-  }
 }
+$().click(function(){
+  $('#result').text('');
+})
 $('#clear-all-numbers').click(function() {
   $('#result').text('');
 });
@@ -22,16 +22,6 @@ $('#clear-current-numbers').click(function() {
 $('#plus').click(function() {
   revise();
   $('#result').text($('#result').text() + '+');
-});
-
-$('#op').click(function() {
-  revise();
-  $('#result').text($('#result').text() + '(');
-});
-
-$('#clo').click(function() {
-  revise();
-  $('#result').text($('#result').text() + ')');
 });
 
 $('#minus').click(function() {
@@ -59,7 +49,7 @@ $('#dot').click(function() {
   $('#result').text($('#result').text() + '.');
 });
 
-$('#eq').click(function() {
+$('#equal').click(function() {
   $('#result').text(eval($('#result').text()));
 });
 

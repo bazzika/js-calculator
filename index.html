@@ -11,82 +11,79 @@
 
 </head>
 <body>
-    <h1>Electronic calculator</h1>
-    <div class="box">
-        <div class="wrapper">
-            <table class="tg">
-                <tr>
-                    <th class="outcome" colspan="4" id="result"></th>
-                </tr>
-                <tr>
-                    <td class="clear-button">
-                        <button type="button" id="clear-all-numbers">AC</button>
-                    </td>
-                    <td class="currentclear-button">
-                        <button type="button" id="clear-current-numbers">CE</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="division">÷</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="number">
-                        <button type="button" id="seven">7</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="eight">8</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="nine">9</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="mult">x</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="number">
-                        <button type="button" id="four">4</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="five">5</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="six">6</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="minus">-</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="number">
-                        <button type="button" id="one">1</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="two">2</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="three">3</button>
-                    </td>
-                    <td class="number">
-                        <br>
-                        <button type="button" class="plus" id="plus">+</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="number">
-                        <button type="button" id="zero">0</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="dot">.</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="mod">%</button>
-                    </td>
-                    <td class="number">
-                        <button type="button" id="eq">=</button>
-                    </td>
-                </tr>
-            </table>
+<div class="calculator container">
+    <div class="row name"> ELECTRONIC CALCULATOR</div>
+    <div class="row">
+        <div class="input">
+            <div class="input" id="result"></div>
+        </div>
+     </div>
+    <div class="container number">
+         <div class="row">
+
+                <div class="col-md-2">
+                    <button class="btn btn-warning btn-lg local"  id="clear-all-numbers">AC</button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-warning btn-lg local glyphicon " id="clear-current-numbers"><span class="glyphicon-arrow-left" aria-hidden="true"></span></button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="division">÷</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="seven">7</button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="eight">8</button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="nine">9</button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="mult">x</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="four">4</button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="five">5</button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="six">6</button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="minus">-</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="one">1</button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="two">2</button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="three">3</button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="plus">+</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="zero">0</button>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary btn-lg local" id="dot">.</button>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary btn-lg btn-block local" id="equal">=</button>
+                </div>
+            </div>
         </div>
     </div>
 <footer>
