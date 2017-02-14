@@ -1,23 +1,27 @@
-var operation = ['+', '-', '*', '/', '%', '.'];
+var operation = ['+', '-', '*', '/', '.'];
+var expr=$('#result').text('');
+
 
 function revise() {
+    var j='.';
     var lastChar = $('#result').text().slice(-1);
     for (var i = 0; i < operation.length; i++) {
       if (operation[i] == lastChar) {
-        $('#result').text('Err');
+        expr=$('#result').text('Err');
+      }
+      if (j.length>1) {
+        expr=$('#result').text('Err');
       }
     }
 }
-$().click(function(){
-  $('#result').text('');
-})
+
 $('#clear-all-numbers').click(function() {
-  $('#result').text('');
+  expr=$('#result').text('');
 });
 
 $('#clear-current-numbers').click(function() {
-  $('#result').text($('#result').text().slice(0,-1));
-});
+  expr=$('#result').text($('#result').text().slice(0,-1));
+  });
 
 $('#plus').click(function() {
   revise();
@@ -37,11 +41,6 @@ $('#mult').click(function() {
 $('#division').click(function() {
   revise();
   $('#result').text($('#result').text() + '/');
-});
-
-$('#mod').click(function() {
-  revise();
-  $('#result').text($('#result').text() + '%');
 });
 
 $('#dot').click(function() {
