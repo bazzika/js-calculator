@@ -1,18 +1,13 @@
 var operation = ['+', '-', '*', '/', '.'];
-var expr=$('#result').text('');
-
+var expr=$('#result').text();
 
 function revise() {
-    var j='.';
-    var lastChar = $('#result').text().slice(-1);
-    for (var i = 0; i < operation.length; i++) {
-      if (operation[i] == lastChar) {
-        expr=$('#result').text('Err');
-      }
-      if (j.length>1) {
-        expr=$('#result').text('Err');
-      }
+  var lastChar = $('#result').text().slice(-1);
+  for (var i = 0; i < operation.length; i++) {
+    if ((operation[i] == lastChar)||(expr.length>=16)) {
+      expr = $('#result').text('Err');
     }
+  }
 }
 
 $('#clear-all-numbers').click(function() {
@@ -25,69 +20,115 @@ $('#clear-current-numbers').click(function() {
 
 $('#plus').click(function() {
   revise();
-  $('#result').text($('#result').text() + '+');
+  expr=$('#result').text();
+  if(expr !== '') {
+    $('#result').text($('#result').text() + '+');
+  }
 });
 
 $('#minus').click(function() {
   revise();
-  $('#result').text($('#result').text() + '-');
+  expr=$('#result').text();
+  if(expr !== '') {
+    $('#result').text($('#result').text() + '-');
+  }
 });
 
 $('#mult').click(function() {
   revise();
-  $('#result').text($('#result').text() + '*');
+  expr=$('#result').text();
+  if(expr !== '') {
+    $('#result').text($('#result').text() + '*');
+  }
 });
 
 $('#division').click(function() {
   revise();
-  $('#result').text($('#result').text() + '/');
+  expr=$('#result').text();
+  if(expr !== '') {
+    $('#result').text($('#result').text() + '/');
+  }
 });
 
 $('#dot').click(function() {
   revise();
-  $('#result').text($('#result').text() + '.');
+  expr=$('#result').text();
+  if(expr.indexOf(".") == -1) {
+    $('#result').text($('#result').text() + '.');
+  }
 });
 
 $('#equal').click(function() {
   $('#result').text(eval($('#result').text()));
 });
 
-$('#nine').click(function() {
-  $('#result').text($('#result').text() + 9);
-});
 
-$('#eight').click(function() {
-  $('#result').text($('#result').text() + 8);
-});
+  $('#nine').click(function () {
+    expr=$('#result').text();
+    if (expr.length<16) {
+      $('#result').text($('#result').text() + 9);
+    }
+  });
 
-$('#seven').click(function() {
-  $('#result').text($('#result').text() + 7);
-});
+  $('#eight').click(function () {
+    expr=$('#result').text();
+    if (expr.length<16) {
+      $('#result').text($('#result').text() + 8);
+    }
+  });
 
-$('#six').click(function() {
-  $('#result').text($('#result').text() + 6);
-});
+  $('#seven').click(function () {
+    expr=$('#result').text();
+    if (expr.length<16) {
+      $('#result').text($('#result').text() + 7);
+    }
+  });
 
-$('#five').click(function() {
-  $('#result').text($('#result').text() + 5);
-});
+  $('#six').click(function () {
+    expr=$('#result').text();
+    if (expr.length<16) {
+      $('#result').text($('#result').text() + 6);
+    }
+  });
 
-$('#four').click(function() {
-  $('#result').text($('#result').text() + 4);
-});
+  $('#five').click(function () {
+    expr=$('#result').text();
+    if (expr.length<16) {
+      $('#result').text($('#result').text() + 5);
+    }
+  });
 
-$('#three').click(function() {
-  $('#result').text($('#result').text() + 3);
-});
+  $('#four').click(function () {
+    expr=$('#result').text();
+    if (expr.length<16) {
+      $('#result').text($('#result').text() + 4);
+    }
+  });
 
-$('#two').click(function() {
-  $('#result').text($('#result').text() + 2);
-});
+  $('#three').click(function () {
+    expr=$('#result').text();
+    if (expr.length<16) {
+      $('#result').text($('#result').text() + 3);
+    }
+  });
 
-$('#one').click(function() {
-  $('#result').text($('#result').text() + 1);
-});
+  $('#two').click(function () {
+    expr=$('#result').text();
+    if (expr.length<16) {
+      $('#result').text($('#result').text() + 2);
+    }
+  });
 
-$('#zero').click(function() {
-  $('#result').text($('#result').text() + 0);
-});
+  $('#one').click(function () {
+    expr=$('#result').text();
+    if (expr.length<16) {
+      $('#result').text($('#result').text() + 1);
+    }
+  });
+
+  $('#zero').click(function () {
+    expr=$('#result').text();
+    if (expr.length<16) {
+      $('#result').text($('#result').text() + 0);
+    }
+  });
