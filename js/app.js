@@ -132,6 +132,8 @@ $('#equal').click(function() {
   $('#zero').click(function () {
     expr=$('#result').text();
     if (expr.length<16) {
-      $('#result').text($('#result').text() + 0);
+      if (expr != '0') {
+        $('#result').text($('#result').text() + 0);
+      }
     }
   });
