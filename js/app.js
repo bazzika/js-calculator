@@ -1,11 +1,11 @@
-var operation = ['+', '-', '*', '/', '.'];
+var operation = ['+', '-', '*', '/'];
 var expr=$('#result').text();
 
 function revise() {
   var lastChar = $('#result').text().slice(-1);
   for (var i = 0; i < operation.length; i++) {
-    if ((operation[i] == lastChar)||(expr.length>=16)) {
-      expr = $('#result').text('Err');
+    if (operation[i] === lastChar) {
+      expr = $('#result').text('error typing');
     }
   }
 }
@@ -52,11 +52,14 @@ $('#division').click(function() {
 
 $('#dot').click(function() {
   revise();
+  for (var i=0; i<operation.length;i++) {
   expr=$('#result').text();
-  if(expr.indexOf(".") == -1) {
-    $('#result').text($('#result').text() + '.');
+    if (expr.indexOf('.', expr.indexOf(operation[i])) == -1) {
+      $('#result').text($('#result').text() + '.');
+    }
   }
 });
+
 
 $('#equal').click(function() {
   $('#result').text(eval($('#result').text()));
