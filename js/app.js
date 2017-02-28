@@ -5,7 +5,7 @@ function revise() {
   var lastChar = $('#result').text().slice(-1);
   for (var i = 0; i < operation.length; i++) {
     if (operation[i] === lastChar) {
-      expr = $('#result').text('error typing');
+      expr=$('#result').text('error typing');
     }
   }
 }
@@ -54,7 +54,7 @@ $('#dot').click(function() {
   revise();
   for (var i=0; i<operation.length;i++) {
   expr=$('#result').text();
-    if (expr.indexOf('.', expr.indexOf(operation[i])) == -1) {
+    if ((expr !== '')&&(expr.indexOf('.', expr.indexOf(operation[i])) == -1)) {
       $('#result').text($('#result').text() + '.');
     }
   }
