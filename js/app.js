@@ -69,63 +69,99 @@ $('#equal').click(function() {
   $('#nine').click(function () {
     expr=$('#result').text();
     if (expr.length<16) {
-      $('#result').text($('#result').text() + 9);
+      if (expr == '0') {
+        $('#result').text($('#result').text().slice(0, -1) + 9);
+      } else {
+        $('#result').text($('#result').text() + 9);
+      }
     }
   });
 
   $('#eight').click(function () {
     expr=$('#result').text();
     if (expr.length<16) {
-      $('#result').text($('#result').text() + 8);
+      if (expr == '0') {
+        $('#result').text($('#result').text().slice(0, -1) + 8);
+      } else {
+        $('#result').text($('#result').text() + 8);
+      }
     }
   });
 
   $('#seven').click(function () {
     expr=$('#result').text();
     if (expr.length<16) {
-      $('#result').text($('#result').text() + 7);
+      if (expr == '0') {
+        $('#result').text($('#result').text().slice(0, -1) + 7);
+      } else {
+        $('#result').text($('#result').text() + 7);
+      }
     }
   });
 
   $('#six').click(function () {
     expr=$('#result').text();
     if (expr.length<16) {
-      $('#result').text($('#result').text() + 6);
+      if (expr == '0') {
+        $('#result').text($('#result').text().slice(0, -1) + 6);
+      } else {
+        $('#result').text($('#result').text() + 6);
+      }
     }
   });
 
   $('#five').click(function () {
     expr=$('#result').text();
     if (expr.length<16) {
-      $('#result').text($('#result').text() + 5);
+      if (expr == '0') {
+        $('#result').text($('#result').text().slice(0, -1) + 5);
+      } else {
+        $('#result').text($('#result').text() + 5);
+      }
     }
   });
 
   $('#four').click(function () {
     expr=$('#result').text();
     if (expr.length<16) {
-      $('#result').text($('#result').text() + 4);
+      if (expr == '0') {
+        $('#result').text($('#result').text().slice(0, -1) + 4);
+      } else {
+        $('#result').text($('#result').text() + 4);
+      }
     }
   });
 
   $('#three').click(function () {
     expr=$('#result').text();
     if (expr.length<16) {
-      $('#result').text($('#result').text() + 3);
+      if (expr == '0') {
+        $('#result').text($('#result').text().slice(0, -1) + 3);
+      } else {
+        $('#result').text($('#result').text() + 3);
+      }
     }
   });
 
   $('#two').click(function () {
     expr=$('#result').text();
     if (expr.length<16) {
-      $('#result').text($('#result').text() + 2);
+      if (expr == '0') {
+        $('#result').text($('#result').text().slice(0, -1) + 2);
+      } else {
+        $('#result').text($('#result').text() + 2);
+      }
     }
   });
 
   $('#one').click(function () {
     expr=$('#result').text();
     if (expr.length<16) {
-      $('#result').text($('#result').text() + 1);
+      if (expr == '0') {
+        $('#result').text($('#result').text().slice(0, -1) + 1);
+      } else {
+        $('#result').text($('#result').text() + 1);
+      }
     }
   });
 
